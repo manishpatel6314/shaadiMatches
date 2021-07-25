@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/circular_shape"
+        android:gravity="center"
+        android:elevation="8dp"
+        />
+
+    <item
+        android:id="@+id/ic_badge"
+        android:left="@dimen/activity_horizontal_margin_small"
+        android:right="@dimen/activity_horizontal_margin_small"
+        android:top="@dimen/activity_horizontal_margin_small"
+        android:bottom="@dimen/activity_horizontal_margin_small"
+        android:drawable="@drawable/ic_heart_black" />
+
+</layer-list>

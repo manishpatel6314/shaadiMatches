@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".login.ui.UserProfile">
+
+
+        <TextView
+            android:id="@+id/your_profile"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/your_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/who_r_u_tag"
+            android:text="@string/who_r_u"
+            app:layout_constraintTop_toBottomOf="@id/your_profile"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@id/your_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/name_tag"
+            android:text="@string/name"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/who_r_u_tag"
+            app:layout_constraintStart_toStartOf="@id/your_profile"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/name_tag"
+            app:layout_constraintStart_toStartOf="@id/your_profile"
+            android:layout_marginTop="4dp"
+
+            android:layout_width="240dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                tools:text="Ryan Elanor"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/about_tag"
+            android:text="@string/about_me"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            app:layout_constraintStart_toStartOf="@id/your_profile"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/about_user"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/about_tag"
+            app:layout_constraintStart_toStartOf="@id/your_profile"
+            android:layout_marginTop="4dp"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                tools:text="Product designer by day. Cyberpunk and awant grade enthusiast by night"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/age_tag"
+            android:text="@string/age"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/about_user"
+            app:layout_constraintStart_toStartOf="@id/your_profile"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/user_age"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/age_tag"
+            app:layout_constraintStart_toStartOf="@id/your_profile"
+            android:layout_marginTop="4dp"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                tools:text="25"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/hobbies"
+            android:text="@string/hobbies"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/user_age"
+            app:layout_constraintStart_toStartOf="@id/your_profile"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/user_hobbies"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/hobbies"
+            app:layout_constraintStart_toStartOf="@id/your_profile"
+            android:layout_marginTop="4dp"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                tools:text="Game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/interest_tag"
+            android:text="@string/interest"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/user_hobbies"
+            app:layout_constraintStart_toStartOf="@id/your_profile"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/user_interest"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/interest_tag"
+            app:layout_constraintStart_toStartOf="@id/your_profile"
+            android:layout_marginTop="4dp"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                tools:text="Black"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
