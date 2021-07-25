@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.manish.shaadi"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        dataBinding.enabled = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    // kotlin
+    implementation deps.kotlin.stdlib
+
+    // androidx views dependency
+    implementation deps.support.app_compat
+    implementation deps.support.app_compat_resources
+    implementation deps.support.recyclerview
+    implementation deps.support.cardview
+    implementation deps.support.constraint_layout
+    implementation deps.support.multidex
+    implementation deps.support.annotations
+    implementation deps.support.exif_interface
+    implementation deps.support.core_utils
+    implementation deps.support.core_utils_ktx
+
+    // material design dependency
+    implementation deps.material
+
+    // room dependency
+    implementation deps.room.runtime
+    implementation deps.room.ktx
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    kapt(deps.room.compiler, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // lifecycle dependency
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.java8
+    implementation deps.lifecycle.viewModel
+    kapt deps.lifecycle.compiler
+
+    // retrofit dependency
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.gson
+
+    // dagger dependency
+    implementation deps.dagger.runtime
+    implementation deps.dagger.android
+    implementation deps.dagger.android_support
+    kapt deps.dagger.android_support_compiler
+    kapt deps.dagger.compiler
+
+    // navigation dependency
+    implementation deps.navigation.fragment_ktx
+
+    // play dependency
+    implementation deps.play.runtime
+
+    // mime dependency
+    implementation deps.http_mime
+
+    // gson dependency
+    implementation deps.gson
+
+    // glide dependency
+    implementation deps.glide
+
+    // lottie dependency
+    implementation deps.lottie
+
+    implementation 'com.facebook.android:facebook-login:5.15.3'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}
